@@ -1,7 +1,7 @@
 'use client'
-import { useEffect } from 'react'
-import { useAngle, useCarSpeed } from '@/store/Controls'
 import Image from 'next/image'
+import { useAngle, useCarSpeed } from '@/store/Controls'
+import { useEffect } from 'react'
 
 interface KeyConfig extends KeyMap {
   keys?: string[]
@@ -25,13 +25,6 @@ function useKeys(keyConfig: KeyConfig[]) {
       const { fn, pressed, up } = keyMap[key]
       keyMap[key].pressed = true
       if (up || !pressed) fn(true)
-    }
-
-    const upHandler = ({ key, target }: KeyboardEvent) => {
-      if (!keyMap[key] || (target as HTMLElement).nodeName === 'INPUT') return
-      const { fn, up } = keyMap[key]
-      keyMap[key].pressed = false
-      if (up) fn(false)
     }
 
     window.addEventListener('keydown', downHandler, { passive: true })

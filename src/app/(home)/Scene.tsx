@@ -1,23 +1,17 @@
 'use client'
 import Ocean from '@/templateforThree/Ocean'
 import Paranoma from './Paranoma'
-import TopNeon from '@/componentsThree/TopNeon'
-import Yatch from '@/componentsThree/Yatch'
 import gsap from 'gsap'
+import useDarkModeStore from '@/store/darkMode'
 import { AmbientLight } from 'three'
 import { Bloom, EffectComposer, N8AO, SMAA, SSAO } from '@react-three/postprocessing'
-import { BottomNeon } from '@/componentsThree/BottomNeon'
-import { CircleNeon } from '@/componentsThree/CircleNeon'
+import { Car_Bmw_2023 } from '@/componentsThree/Box'
 import { Float, OrbitControls } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
-import useDarkModeStore from '@/store/darkMode'
-import { Car_Bmw_2023 } from '@/componentsThree/Box'
 
 export default function Scene() {
   const darkModeValue = useDarkModeStore((state) => state.darkMode)
-
   const lightRef = useRef<AmbientLight>(null)
-
   const dayToNight = () => {
     gsap.to(lightRef.current, {
       overwrite: true,
@@ -56,13 +50,7 @@ export default function Scene() {
           rotationIntensity={0.1}
           floatIntensity={0.1}
           floatingRange={[-0.6, -0.3]}>
-          {/* <Yatch /> */}
           <Car_Bmw_2023 />
-          <group visible={darkModeValue}>
-            <TopNeon pos={[0, 0.03, 0]} />
-            <BottomNeon pos={[0, -0.01, 0]} />
-            <CircleNeon pos={[0, -0.01, 0]} />
-          </group>
         </Float>
         <Paranoma />
         <Ocean

@@ -1,11 +1,11 @@
 'use client'
+import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import Image from 'next/image'
 
-import { LogoSVG } from '@/components/Svgs/LogoSVG'
-import { useProgress } from '@react-three/drei'
+// eslint-disable-next-line import/no-unresolved
 import ImageAnnotation from 'public/images/Annotation 2024-04-10 174319.png'
+import { useProgress } from '@react-three/drei'
 
 export default function Loading() {
   const { progress } = useProgress()

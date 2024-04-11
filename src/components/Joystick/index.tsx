@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
+import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick'
 import { Joystick } from 'react-joystick-component'
 import { useAngle, useCarSpeed, useDirection } from '@/store/Controls'
-import { IJoystickUpdateEvent } from 'react-joystick-component/build/lib/Joystick'
 
 function TouchJoystick() {
   const incrementSpeed = useCarSpeed((state) => state.increment)

@@ -22,6 +22,6 @@
       "@/*": ["./src/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/store/Controls/index.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/store/Controls/index.js", "src/componentsThree/Box/Bmw_m4_csl_2023.jsx", "src/componentsThree/Box/Bmw_m4_csl_2023.jsx"],
   "exclude": ["node_modules"]
 }

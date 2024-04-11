@@ -37,7 +37,7 @@ const Paranoma = () => {
   return (
     <group>
       <Environment
-        files={darkMode ? '/hdr/env.hdr' : '/hdr/daySky.hdr'}
+        files={'/hdr/daySky.hdr'}
         background
       />
     </group>

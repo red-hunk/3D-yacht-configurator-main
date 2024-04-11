@@ -1,13 +1,25 @@
 import GreenBox from './GreenBox'
 import RedBox from './RedBox'
+import gsap from 'gsap'
 import { OrbitControls } from '@react-three/drei'
 import { useAngle, useCarSpeed, useDirection, useShip } from '@/store/Controls'
+import { useEffect, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useRef } from 'react'
 
 export function Bmw_m4_csl_2023(props) {
   const { camera } = useThree()
 
+  const showShipA = () => {
+    gsap.to(redRef.current, {
+      ease: 'power2.out'
+    })
+  }
+
+  const showShipB = () => {
+    gsap.to(greenRef.current, {
+      ease: 'power2.out'
+    })
+  }
   const ref = useRef()
   const speed = useCarSpeed((state) => state.speed)
   const angle = useAngle((state) => state.angle)
@@ -19,12 +31,10 @@ export function Bmw_m4_csl_2023(props) {
   const showShip = useShip((state) => state.selectedShip)
 
   const orbitRef = useRef()
+  const redRef = useRef()
+  const greenRef = useRef()
 
   useFrame((_, delta) => {
-    // refs.frontLeft.current.rotation.x += speed * delta;
-    // refs.frontRight.current.rotation.x += speed * delta;
-    // refs.backLeft.current.rotation.x += speed * delta;
-    // refs.backRight.current.rotation.x += speed * delta;
     ref.current.position.z += speed * Math.cos(angle) * delta
     ref.current.position.x += speed * Math.sin(angle) * delta
     orbitRef.current.target.z += speed * Math.cos(angle) * delta
@@ -37,12 +47,16 @@ export function Bmw_m4_csl_2023(props) {
       ref.current.rotation.y += Math.PI / 1800
     }
   })
+  useEffect(() => {
+    if (showShip === 'selectedShipA') showShipA()
+    if (showShip === 'selectedShipB') showShipB()
+  }, [showShip])
 
   const returnFunc = () => {
     if (showShip === 'selectedShipA') {
-      return <RedBox />
+      return <RedBox ref={redRef} />
     } else if (showShip === 'selectedShipB') {
-      return <GreenBox />
+      return <GreenBox ref={greenRef} />
     }
   }
 

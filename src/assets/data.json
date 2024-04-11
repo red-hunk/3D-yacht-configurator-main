@@ -1,0 +1,38 @@
+[
+  {
+    "name": "AI Hofuf",
+    "content": "Al-Hofuf is the major urban city in the Al-Ahsa Oasis in the Eastern Province of Saudi Arabia, with a population of 858,395. It is also known for being one of the largest date producers in the world, and for its old markets and palaces.",
+    "url": "/images/saudi/AlHofuf.jpg",
+    "position": [5, 1, 0.6]
+  },
+  {
+    "name": "Riyadh",
+    "content": "Riyadh, Saudi Arabia's capital and main financial hub, is on a desert plateau in the country's center. Business district landmarks include the 302m-high Kingdom Centre, with a sky bridge connecting 2 towers, and 267m-high Al Faisaliah Centre, with a glass-globe summit. In the historical Deira district, Masmak Fort marks the site of the 1902 raid that gave the Al Sauds control of Riyadh.",
+    "url": "/images/saudi/Riyadh.jpg",
+    "position": [0.6, 1, 0.3]
+  },
+  {
+    "name": "Abha",
+    "content": "Abha is the capital city of Aseer Province near the Red Sea in southwest Saudi Arabia. It's known for the craggy mountains of Aseer National Park, which is home to birds, dense juniper forests and the towering Jabal Soodah peak. At the heart of downtown Abha is the restored mud-walled Shada Castle, now a handicrafts museum. Nearby, the Al-Muftaha district has stone houses and a weekly market with crafts and curios.",
+    "url": "/images/saudi/Abha.jpg",
+    "position": [-2, 1, 8]
+  },
+  {
+    "name": "Hail",
+    "content": "Ha'il is a city in north-western Saudi Arabia. It is the capital and largest city of Ha'il Region, with a population of about 605,930. Ha'il is largely agricultural, with significant grain, date, and fruit production.",
+    "url": "/images/saudi/Hail.png",
+    "position": [-2, 1, -3]
+  },
+  {
+    "name": "Tabuk",
+    "content": "Tabuk, also spelled Tabouk, is the capital city of the Tabuk Region in northwestern Saudi Arabia. It has a population of 667,000. It is close to the Jordan-Saudi Arabia border and houses the largest air force base in Saudi Arabia",
+    "url": "/images/saudi/Tabuk.jpg",
+    "position": [-7, 1, -3]
+  },
+  {
+    "name": "Hafar Al Batin",
+    "content": "Hafar al-Batin, also frequently spelled Hafr al-Batin, is a city in the Hafar al-Batin Governorate, Eastern Province, Saudi Arabia. It is located 430 km north of Riyadh, 94.2 km from the Kuwait border, and about 74.3 from the Iraq border.",
+    "url": "/images/saudi/HafarAlBatin.jpg",
+    "position": [2, 1, -6]
+  }
+]
